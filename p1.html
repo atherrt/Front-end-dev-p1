@@ -72,14 +72,16 @@
             const btn1 = document.getElementById('fun2');
             const out1 = document.getElementById('output1');
 
+
+
+
             function showInList() {
-                const listItem = document.createElement('li');
-                listItem.textContent = txt1.value;
-                const count = listItem.length;
-                out1.append(count);
-                document.getElementById('result').textContent = `Number of alphabets: ${count}`;
-                out1.appendChild(listItem);
-                txt1.value = ''; // Clear the input field after adding the text
+            const listItem = document.createElement('li');
+            listItem.textContent = txt1.value;
+            const count = listItem.textContent.length;
+            out1.append(count);
+            out1.appendChild(listItem);
+            txt1.value = ''; // Clear the input field after adding the text
             }
 
             btn1.addEventListener('click', showInList);
