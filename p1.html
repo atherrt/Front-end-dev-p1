@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PROJECT 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2c5e1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: rgb(88, 14, 39);
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid lightblue;
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        input[type="button"] {
+            color: white;
+            background-color: palevioletred;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="button"]:hover {
+            background-color: #d4708f;
+        }
+        ol {
+            color: palevioletred;
+            font-size: 18px;
+            margin-top: 20px;
+            padding-left: 0;
+        }
+        
+        ol li {
+            background: white;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            padding: 10px;
+            
+            list-style-type: none;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>PROJECT 1</h1>
+
+    <input type="text" id="fun1"/>
+    <input type="button" id="fun2" value="ADD TEXT IN LIST"/>
+
+    <ol class="output" id="output1"></ol>
+    <p id="pers"></p>
+    
+    <script type="text/javascript"> 
+        document.addEventListener('DOMContentLoaded', function() {
+            const txt1 = document.getElementById('fun1');
+            const btn1 = document.getElementById('fun2');
+            const out1 = document.getElementById('output1');
+
+            function showInList() {
+                const listItem = document.createElement('li');
+                listItem.textContent = txt1.value;
+                const count = listItem.length;
+                out1.append(count);
+                document.getElementById('result').textContent = `Number of alphabets: ${count}`;
+                out1.appendChild(listItem);
+                txt1.value = ''; // Clear the input field after adding the text
+            }
+
+            btn1.addEventListener('click', showInList);
+        });
+    </script>
+</body>
+</html>
