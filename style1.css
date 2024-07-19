@@ -1,0 +1,140 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #af4ca7; /* Purple background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li, nav ul l1 {
+    margin: 0 15px;
+}
+
+nav ul li a, nav ul l1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after, nav ul l1 a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after, nav ul l1 a:hover::after {
+    width: 100%;
+}
+
+/* Main content styling */
+main {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.profile-pic, .post-img, .friend-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.friend {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.friend-pic {
+    width: 80px;
+    height: 80px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-top: 1px solid #ccc;
+}
+
+/* Header title styling */
+h1 {
+    color: antiquewhite;
+    text-decoration: underline;
+}
+
+/* Section title styling */
+h2 {
+    color: #4c7aaf;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li, nav ul l1 {
+        margin: 10px 0;
+    }
+}
